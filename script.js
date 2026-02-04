@@ -9,6 +9,19 @@ function goToYesPage() {
     createConfetti();
 }
 
+function startOver(event) {
+    event.preventDefault();
+    const page1 = document.getElementById('page1');
+    const page2 = document.getElementById('page2');
+    
+    page1.classList.add('active');
+    page2.classList.remove('active');
+    
+    // Reset the No button position
+    const noButton = document.querySelector('.btn-no');
+    noButton.style.transform = '';
+}
+
 function moveButtonAway() {
     const noButton = document.querySelector('.btn-no');
     

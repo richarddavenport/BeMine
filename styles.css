@@ -227,6 +227,23 @@ body {
     font-weight: bold;
 }
 
+.start-over {
+    font-size: 0.9rem;
+    color: #ff69b4;
+    text-decoration: none;
+    cursor: pointer;
+    font-style: italic;
+    transition: all 0.3s ease;
+    display: inline-block;
+    margin-bottom: 30px;
+    border-bottom: 1px solid transparent;
+}
+
+.start-over:hover {
+    border-bottom: 1px solid #ff69b4;
+    opacity: 0.8;
+}
+
 .celebration {
     display: flex;
     justify-content: center;
