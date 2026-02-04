@@ -9,10 +9,6 @@ function goToYesPage() {
     createConfetti();
 }
 
-function handleNo() {
-    moveButtonAway();
-}
-
 function moveButtonAway() {
     const noButton = document.querySelector('.btn-no');
     
@@ -24,6 +20,17 @@ function moveButtonAway() {
     noButton.style.transition = 'transform 0.3s ease';
     noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
 }
+
+// Initialize touch event listener for the No button
+document.addEventListener('DOMContentLoaded', function() {
+    const noButton = document.querySelector('.btn-no');
+    
+    // Touch event for mobile
+    noButton.addEventListener('touchstart', function(e) {
+        e.preventDefault();
+        moveButtonAway();
+    });
+});
 
 function createConfetti() {
     const confetti = ['❤️', '💕', '💖', '💗'];
