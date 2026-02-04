@@ -10,18 +10,19 @@ function goToYesPage() {
 }
 
 function handleNo() {
+    moveButtonAway();
+}
+
+function moveButtonAway() {
     const noButton = document.querySelector('.btn-no');
     
-    // Move the button away when hovered/clicked
-    const randomX = (Math.random() - 0.5) * 200;
-    const randomY = (Math.random() - 0.5) * 200;
+    // Move the button away with random offset
+    const randomX = (Math.random() - 0.5) * 300;
+    const randomY = (Math.random() - 0.5) * 300;
     
+    noButton.style.position = 'relative';
+    noButton.style.transition = 'transform 0.3s ease';
     noButton.style.transform = `translate(${randomX}px, ${randomY}px)`;
-    
-    // Reset after a short delay
-    setTimeout(() => {
-        noButton.style.transform = '';
-    }, 500);
 }
 
 function createConfetti() {
