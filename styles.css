@@ -148,6 +148,12 @@ body {
     animation: fadeIn 0.8s ease-in;
 }
 
+.name {
+    font-size: 4.5rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
 .button-container {
     display: flex;
     gap: 30px;
